@@ -1,0 +1,9 @@
+// CFFmpeg — the Swift-visible clang module for the demux-only FFmpeg build.
+// `shim.h` pulls in the libav* headers and adds a few static-inline helpers
+// for the bits that don't bridge to Swift (macros, compound-literal macros
+// like av_err2str, AVERROR(...) error codes). CXDemuxer / CXFormatDescriptionBuilder
+// guard their use with `#if canImport(CFFmpeg)`.
+module CFFmpeg {
+    header "shim.h"
+    export *
+}
