@@ -2,7 +2,7 @@
 #
 # build-ffmpeg.sh — vendor a DEMUX-ONLY FFmpeg as CFFmpeg.xcframework.
 #
-# This is the bright-line build (see ../DESIGN.md §0): libavcodec is compiled
+# This is the bright-line build: libavcodec is compiled
 # with ZERO decoders and ZERO encoders. It can demux containers, parse
 # bitstreams, and reframe NAL units — nothing more. The actual decoding is
 # done by VideoToolbox / AudioToolbox at runtime. A build that re-enables a
